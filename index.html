@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La Lonja · Marisquería y tapas en Lloret de Mar</title>
+<meta name="description" content="La Lonja, marisquería y bar de tapas en el Carrer de Sant Tomàs, 11 de Lloret de Mar: paellas, arroz caldoso, mariscadas, 5 tapas por 15,50 € y menú del día. Todos los días de 12:00 a 24:00. Tel. 972 36 74 99.">
+<meta name="theme-color" content="#0E1F2C">
+<meta property="og:title" content="La Lonja · Del mar a la mesa">
+<meta property="og:description" content="Arroces, mariscadas y tapas en el centro de Lloret de Mar.">
+<meta property="og:image" content="assets/img/paella-cigalas.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%230E1F2C'/%3E%3Cpath d='M12 32 C22 20 38 20 48 32 C38 44 22 44 12 32Z M48 32 L56 24 V40Z' fill='%23C59A4A'/%3E%3Ccircle cx='22' cy='30' r='2.4' fill='%230E1F2C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Work+Sans:wght@300;400;500;600&family=Caveat:wght@500;700&family=Doto:wght@600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/light/style.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="fish" viewBox="0 0 64 32">
+    <path d="M4 16 C14 4 34 2 48 16 C34 30 14 28 4 16Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <path d="M48 16 L60 6 V26 Z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+    <circle cx="14" cy="14" r="2" fill="currentColor"/>
+    <path d="M22 10 q5 6 0 12 M30 9 q5 7 0 14" fill="none" stroke="currentColor" stroke-width="1.6"/>
+  </symbol>
+</svg>
+
+<!-- ============ INTRO · reloj de subasta ============ -->
+<div class="intro" id="intro" aria-hidden="true">
+  <svg class="intro__clock" id="introClock" viewBox="0 0 400 400"></svg>
+  <div class="intro__center">
+    <span class="intro__num" id="introNum">100</span>
+    <span class="intro__lbl">Lonja de Lloret</span>
+  </div>
+  <p class="intro__name"><span>La Lonja</span></p>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="La Lonja, inicio">
+    <span class="brand__seal"><svg viewBox="0 0 64 32"><use href="#fish"/></svg></span>
+    <span class="brand__name">La Lonja<small>Lloret de Mar</small></span>
+  </a>
+  <nav class="nav__links" id="navLinks" aria-label="Principal">
+    <a href="#subasta">La subasta</a>
+    <a href="#tapas">Tapas</a>
+    <a href="#delmar">Del mar</a>
+    <a href="#carta">Carta</a>
+    <a href="#visita">Visita</a>
+  </nav>
+  <div class="nav__end">
+    <span class="live" data-live><i></i><span data-live-text>Horario</span></span>
+    <a class="btn btn--brass btn--sm" href="tel:+34972367499"><i class="ph-light ph-phone"></i><span>972 36 74 99</span></a>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Menú"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero__slides" id="slides" aria-hidden="true">
+      <img src="assets/img/paella-cigalas.jpg" alt="" class="is-on" data-lot="Paella de marisco con cigalas">
+      <img src="assets/img/mariscada.jpg" alt="" data-lot="Mariscada">
+      <img src="assets/img/paella-marinera.jpg" alt="" data-lot="Paella marinera">
+      <img src="assets/img/caldoso-cazuela.jpg" alt="" data-lot="Arroz caldoso">
+    </div>
+    <div class="hero__shade"></div>
+    <div class="hero__copy">
+      <p class="eyebrow">Marisquería y tapas · Lloret de Mar</p>
+      <h1 class="hero__title"><span class="line"><span>La Lonja</span></span></h1>
+      <p class="hero__lead">Arroces, mariscadas y tapas en el Carrer de Sant Tomàs. De mediodía a medianoche, todos los días.</p>
+      <div class="hero__cta">
+        <a class="btn btn--brass" href="#subasta"><i class="ph-light ph-gavel"></i><span>Que decida la subasta</span></a>
+        <a class="btn btn--ghost" href="#carta"><span>Ver la carta</span><i class="ph-light ph-arrow-down"></i></a>
+      </div>
+    </div>
+    <div class="hero__lot" aria-live="off"><span>Lote</span><b id="lotNum">01</b><em id="lotName">Paella de marisco con cigalas</em></div>
+    <div class="led" aria-hidden="true">
+      <div class="led__track">
+        <span>Paella de marisco</span><i>◆</i><span>Arroz caldoso con almejas y sepia</span><i>◆</i><span>Mariscada</span><i>◆</i><span>Fideuá</span><i>◆</i><span>Arroz con bogavante</span><i>◆</i><span>5 tapas · 15,50 €</span><i>◆</i><span>Menú del día · 25,90 €</span><i>◆</i>
+        <span>Paella de marisco</span><i>◆</i><span>Arroz caldoso con almejas y sepia</span><i>◆</i><span>Mariscada</span><i>◆</i><span>Fideuá</span><i>◆</i><span>Arroz con bogavante</span><i>◆</i><span>5 tapas · 15,50 €</span><i>◆</i><span>Menú del día · 25,90 €</span><i>◆</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LA LONJA ============ -->
+  <section class="intro-sec">
+    <div class="intro-sec__text">
+      <p class="eyebrow eyebrow--dark">El nombre</p>
+      <h2 class="h2">En una lonja, el pescado se subasta al llegar a puerto. <em>Aquí, llega a la mesa.</em></h2>
+      <p class="lead">Un restaurante acogedor, en una calle tranquila a dos pasos del centro, con una terraza interior y una carta de mar: paellas y arroces, mariscadas, pescado y tapas de toda la vida.</p>
+    </div>
+    <div class="intro-sec__figs">
+      <figure class="fig fig--a"><img src="assets/img/fachada.jpg" alt="Fachada y terraza de La Lonja en el Carrer de Sant Tomàs" loading="lazy"></figure>
+      <figure class="fig fig--b"><img src="assets/img/paellera.jpg" alt="Paella en la mesa de La Lonja" loading="lazy"></figure>
+    </div>
+    <ul class="stats">
+      <li><b>4,4</b><span>en Google · 3.405 reseñas</span></li>
+      <li><b>98%</b><span>lo recomienda en Facebook</span></li>
+      <li><b>12h</b><span>abierto cada día, de 12:00 a 24:00</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ LA SUBASTA (interactivo) ============ -->
+  <section class="auction" id="subasta">
+    <div class="auction__head">
+      <p class="eyebrow">Interactivo · menú del día</p>
+      <h2 class="h2">¿No sabes qué pedir? <em>Que decida la subasta.</em></h2>
+      <p class="lead">Como en el reloj de una lonja, las luces corren y el precio baja. Pulsa <b>«¡Me lo quedo!»</b> y la subasta te adjudica un primero y un segundo del menú del día. También puedes tocar un plato del reloj para elegirlo tú.</p>
+    </div>
+    <div class="auction__grid">
+      <div class="clock-wrap">
+        <svg class="clock" id="clock" viewBox="0 0 520 520" role="group" aria-label="Reloj de subasta con los platos del menú del día"></svg>
+        <div class="clock__btns">
+          <button class="btn btn--brass" id="bidBtn" type="button"><i class="ph-light ph-gavel"></i><span>¡Subasta!</span></button>
+        </div>
+      </div>
+      <div class="lot-ticket" id="lotTicket" aria-live="polite">
+        <div class="lot-ticket__hole"></div>
+        <p class="lot-ticket__k">La Lonja · Lloret de Mar</p>
+        <p class="lot-ticket__n">Lote nº <b id="lotNo">—</b></p>
+        <dl>
+          <dt>Primero</dt><dd id="pickFirst">Pulsa «¡Subasta!»</dd>
+          <dt>Segundo</dt><dd id="pickSecond">…o elige en el reloj</dd>
+          <dt>Incluye</dt><dd>Postre casero, pan y 1 bebida</dd>
+        </dl>
+        <p class="lot-ticket__price"><span>Adjudicado por</span><b>25,90 €</b></p>
+        <p class="lot-ticket__note">Menú del día según la pizarra de la puerta: los platos pueden cambiar. El arroz meloso se prepara para un mínimo de 2 personas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TAPAS (interactivo) ============ -->
+  <section class="tapas" id="tapas">
+    <div class="chalk">
+      <div class="chalk__head">
+        <p class="chalk__brand">La Lonja</p>
+        <h2 class="chalk__title">Tapas</h2>
+        <p class="chalk__deal">5 tapas <b>15,50 €</b></p>
+        <p class="chalk__help">Toca cinco tapas de la pizarra y móntate la bandeja. Toca una cazuelita para quitarla.</p>
+      </div>
+      <ul class="chalk__list" id="tapaList"></ul>
+      <div class="tray-wrap">
+        <div class="tray" id="tray"></div>
+        <div class="tray__foot">
+          <span class="tray__count" id="trayCount">0 / 5</span>
+          <span class="tray__msg" id="trayMsg">Elige tus tapas</span>
+          <button class="tray__reset" id="trayReset" type="button"><i class="ph-light ph-arrow-counter-clockwise"></i> Vaciar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DEL MAR (galería horizontal) ============ -->
+  <section class="sea" id="delmar">
+    <div class="sea__pin">
+      <div class="sea__head">
+        <p class="eyebrow">Fotos de Facebook y de nuestros clientes</p>
+        <h2 class="h2">Del mar <em>a la mesa</em></h2>
+      </div>
+      <div class="sea__track" id="seaTrack"></div>
+    </div>
+  </section>
+
+  <!-- ============ LO MÁS PEDIDO ============ -->
+  <section class="board" id="pedido">
+    <div class="board__head">
+      <p class="eyebrow">Según las reseñas de Google</p>
+      <h2 class="h2">Lo que más <em>se comenta</em></h2>
+      <p class="lead">Los temas que Google detecta en las 3.405 reseñas de La Lonja, con el número de reseñas que los mencionan.</p>
+    </div>
+    <ol class="bars" id="bars"></ol>
+  </section>
+
+  <!-- ============ CARTA ============ -->
+  <section class="menu" id="carta">
+    <div class="menu__head">
+      <p class="eyebrow eyebrow--dark">La carta</p>
+      <h2 class="h2">Pizarra, menú <em>y especialidades</em></h2>
+    </div>
+    <div class="menu__cols">
+      <article class="mcol">
+        <h3>Tapas <span>5 por 15,50 €</span></h3>
+        <ul id="mTapas"></ul>
+      </article>
+      <article class="mcol">
+        <h3>Menú del día <span>25,90 €</span></h3>
+        <h4>Primeros</h4>
+        <ul id="mFirst"></ul>
+        <h4>Segundos</h4>
+        <ul id="mSecond"></ul>
+        <p class="mcol__inc">Postre casero · pan · 1 bebida incluida</p>
+      </article>
+      <article class="mcol">
+        <h3>De la casa <span>precio en sala</span></h3>
+        <ul id="mHouse"></ul>
+      </article>
+    </div>
+    <p class="menu__note"><i class="ph-light ph-info"></i> Tapas y menú del día tal como aparecen en las pizarras de la entrada; los platos pueden variar según el día. Para arroces, mariscadas y pescado, consulta la carta y los precios en sala.</p>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="voices">
+    <svg class="voices__fish" viewBox="0 0 64 32" aria-hidden="true"><use href="#fish"/></svg>
+    <div class="voices__list" id="voices">
+      <blockquote class="voice is-on"><p>«Optamos por el menú y fue todo un acierto. Pedimos el arroz caldoso con almejas y sepia y estaba espectacular: en su punto y con mucho sabor.»</p><cite>Reseña en Google</cite></blockquote>
+      <blockquote class="voice"><p>«Tapas excelentes, acogida y servicio de diez. Os recomiendo la paella negra, una maravilla.»</p><cite>Isabelle · Facebook (traducido del francés)</cite></blockquote>
+      <blockquote class="voice"><p>«Comimos el menú del sábado y quedamos muy contentos. El servicio, muy correcto, amable y servicial.»</p><cite>Reseña en Google</cite></blockquote>
+      <blockquote class="voice"><p>«¡Parrillada muy buena! Atención excelente.»</p><cite>Adriana · Local Guide</cite></blockquote>
+    </div>
+    <div class="voices__nav" id="voiceNav"></div>
+  </section>
+
+  <!-- ============ VISITA ============ -->
+  <section class="visit" id="visita">
+    <div class="visit__info">
+      <p class="eyebrow">Visita</p>
+      <h2 class="h2">Carrer de <em>Sant Tomàs, 11</em></h2>
+      <div class="visit__status" data-live><i></i><span data-live-text>Consultando horario…</span></div>
+      <ul class="hours" id="hours">
+        <li data-day="1"><span>Lunes</span><span>12:00 – 24:00</span></li>
+        <li data-day="2"><span>Martes</span><span>12:00 – 24:00</span></li>
+        <li data-day="3"><span>Miércoles</span><span>12:00 – 24:00</span></li>
+        <li data-day="4"><span>Jueves</span><span>12:00 – 24:00</span></li>
+        <li data-day="5"><span>Viernes</span><span>12:00 – 24:00</span></li>
+        <li data-day="6"><span>Sábado</span><span>12:00 – 24:00</span></li>
+        <li data-day="0"><span>Domingo</span><span>12:00 – 24:00</span></li>
+      </ul>
+      <p class="visit__season"><i class="ph-light ph-calendar-x"></i> En invierno suele cerrar unas semanas; la vuelta de temporada se anuncia en su Facebook.</p>
+      <address class="visit__addr">
+        <a href="https://maps.google.com/?q=La+Lonja,+Carrer+de+Sant+Tom%C3%A0s,+11,+Lloret+de+Mar" target="_blank" rel="noopener"><i class="ph-light ph-map-pin"></i>Carrer de Sant Tomàs, 11 · 17310 Lloret de Mar</a>
+        <a href="tel:+34972367499"><i class="ph-light ph-phone"></i>972 36 74 99 · mejor reservar</a>
+        <a href="https://www.facebook.com/p/La-Lonja-Lloret-de-Mar-100063563264010/" target="_blank" rel="noopener"><i class="ph-light ph-facebook-logo"></i>La Lonja Lloret de Mar</a>
+      </address>
+      <ul class="tags"><li><i class="ph-light ph-plant"></i>Terraza interior</li><li><i class="ph-light ph-wheelchair"></i>Entrada y aseo adaptados</li><li><i class="ph-light ph-wine"></i>Sangría y vinos</li></ul>
+    </div>
+    <div class="visit__map">
+      <iframe title="Mapa: La Lonja en Lloret de Mar" src="https://maps.google.com/maps?q=La%20Lonja%2C%20Carrer%20de%20Sant%20Tom%C3%A0s%2011%2C%20Lloret%20de%20Mar&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <img src="assets/img/terraza.jpg" alt="Terraza de La Lonja" loading="lazy">
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <svg class="foot__fish" viewBox="0 0 64 32" aria-hidden="true"><use href="#fish"/></svg>
+  <p class="foot__big">La Lonja</p>
+  <div class="foot__row">
+    <span>Marisquería y tapas · Carrer de Sant Tomàs, 11 · Lloret de Mar</span>
+    <span>Fotos: Facebook de La Lonja y reseñas de Google</span>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto ampliada" hidden>
+  <button class="lb__close" type="button" aria-label="Cerrar"><i class="ph-light ph-x"></i></button>
+  <figure class="lb__fig"><img alt=""><figcaption></figcaption></figure>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
